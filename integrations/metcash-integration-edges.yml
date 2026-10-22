@@ -1,0 +1,54 @@
+generated: '2026-10-22'
+method: searched
+source:
+- https://www.spscommerce.com/au/network/find-a-partner/view/metcash-limited/
+- https://zapier.com/apps/metcash/integrations
+- https://n8n.io/integrations/metcash/
+- https://composio.dev/toolkits/metcash
+- https://monid.ai/tools/metcash
+checked:
+- https://zapier.com/apps/metcash/integrations
+- https://www.metcash.com/suppliers/
+- https://wpdev.cin7.com/integrations/edi-retailers/metcash
+- https://www.spscommerce.com/au/network/find-a-partner/view/metcash-limited/
+- https://home.messagexchange.com/retailers/metcash-edi/
+- https://help.bepoz.com/bepoz/metcash-host-einvoices-product-summary-page
+- https://www.swiftpos.com.au/integrations-invoicing/
+- https://composio.dev/toolkits/metcash
+- https://monid.ai/tools/metcash
+- https://n8n.io/integrations/metcash/
+summary: null
+marketplace_apps: []
+edges:
+- partner_name: SPS Commerce
+  partner: sps-commerce
+  type: docs
+  direction: third-party
+  category: EDI
+  use_case: Managed Metcash EDI compliance for suppliers
+  evidence: https://www.spscommerce.com/au/network/find-a-partner/view/metcash-limited/
+- partner_name: MessageXchange
+  partner: null
+  type: docs
+  direction: third-party
+  category: EDI
+  use_case: Metcash EDI web forms / portal for suppliers
+  evidence: https://home.messagexchange.com/retailers/metcash-edi/
+- partner_name: Bepoz
+  partner: null
+  type: docs
+  direction: third-party
+  category: POS
+  use_case: Metcash host pricebook/promotion files and eInvoices into Bepoz POS
+  evidence: https://help.bepoz.com/bepoz/metcash-host-einvoices-product-summary-page
+- partner_name: SwiftPOS
+  partner: null
+  type: docs
+  direction: third-party
+  category: POS
+  use_case: POS invoicing integration listing Metcash as a supplier
+  evidence: https://www.swiftpos.com.au/integrations-invoicing/
+templates: []
+note: Metcash publishes no developer API, docs or marketplace listing. The edges below are THIRD-PARTY vendor pages
+  that state they connect suppliers/retailers to Metcash (EDI trading and host/e-invoice files). They are vendor
+  claims, not Metcash-published integrations.

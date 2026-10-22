@@ -1,0 +1,18 @@
+name: Metcash MCP Server
+type: MCPServer
+generated: '2026-10-22'
+method: none
+status: none
+note: >-
+  No official Metcash MCP server is published or documented, and there is no public OpenAPI
+  contract from which to derive a candidate tool list. A web search ("Metcash API developer MCP
+  server MetConnect", 2026-10-22) returned no Metcash results. Pre-flight saw
+  https://metconnect.metcash.com/mcp/v1 return 401, but its control path also returned 401
+  (verdict: opaque -- the Salesforce portal edge authenticates every path), so that is NOT
+  evidence of an MCP server. The path is not documented by Metcash and was not called.
+auth: unknown
+tools: []
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched

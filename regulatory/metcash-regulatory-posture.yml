@@ -1,0 +1,72 @@
+generated: '2026-10-22'
+method: searched
+source: https://www.metcash.com/legal/privacy-policy/
+fetch_note: >-
+  A plain curl GET of both legal pages returned 403 (a "Please enable cookies" challenge page); the
+  fetch-url.py helper (plain strategy, browser UA) returned 200 with full text for both. The Terms &
+  Conditions page (https://www.metcash.com/legal/terms-conditions/, 200) was read and speaks to none of
+  the signals below.
+signals:
+  data_subject_request:
+    url: https://www.metcash.com/legal/privacy-policy/
+    section: '7. How you can request access and corrections to your personal information or lodge queries and complaints'
+    channel: privacy@metcash.com (Group Privacy Officer, Metcash Trading Limited)
+    rights_named: [access, correction]
+    escalation: Office of the Australian Information Commissioner (oaic.gov.au)
+    evidence:
+    - source: https://www.metcash.com/legal/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'You have the right to request access to, or correction of, any personal information we hold about you.'
+    - source: https://www.metcash.com/legal/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'We seek to acknowledge, and investigate within a reasonable time, any complaint about the way we handle personal information.'
+    note: >-
+      Access and correction rights (Australian Privacy Act framing), via the Group Privacy Officer by email or
+      the user's own account profile. No deletion or portability right is named and no fixed response time is
+      stated ("a reasonable time"). Unresolved complaints can go to the OAIC.
+  data_residency:
+    url: https://www.metcash.com/legal/privacy-policy/
+    section: 'c. Who we disclose your personal information to'
+    evidence:
+    - source: https://www.metcash.com/legal/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'Some of the third parties that your personal information is disclosed to are located overseas, including the following countries: United States, Canada, United Kingdom, Ireland, Romania, Turkey, China, Singapore, Thailand, Vietnam, the Philippines, India, Pakistan, New Zealand (where you are based in Australia) and Australia (where you are based in New Zealand).'
+    note: >-
+      This is a cross-border disclosure statement, not a residency commitment: customer data may go to
+      third parties in the named countries. Separate, shorter country lists are given for suppliers/partners
+      (section 4c) and job applicants (section 5c).
+  ai_transparency:
+    url: https://www.metcash.com/legal/privacy-policy/
+    section: 'a. What personal information we collect and how we collect it; 5. d. Automated decisions'
+    evidence:
+    - source: https://www.metcash.com/legal/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'We also collect personal information about you when we (or our service providers) generate insights and inferences about you using data analytics or technologies such as AI.'
+    - source: https://www.metcash.com/legal/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'Metcash and its service providers may use computer programs to filter job applications to Metcash based on minimum criteria applicable to available jobs.'
+    - source: https://www.metcash.com/legal/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'Whilst the program will automatically filter out applications that do not meet minimum criteria, the criteria are set by Metcash.'
+    note: >-
+      Says that AI is used to infer things about individuals, and describes automated filtering of job
+      applications in its own section ("Automated decisions"). It does not name any AI system, and it offers
+      no opt-out or human-review right.
+  subprocessors:
+    url: https://www.metcash.com/legal/privacy-policy/
+    section: 'b. Why we collect, hold, use and disclose your personal information'
+    evidence:
+    - source: https://www.metcash.com/legal/privacy-policy/
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: 'The digital technologies described above may be provided by third parties and may include Google Analytics, Google AdSense, Google Ads, Google Data Cloud, Google Looker Studio, Google Tag Manager, Meta Pixel, Segment, Microsoft Clarity, Microsoft Ads, Bing Ads, Facebook Ads, Double Click, Trade Desk, Auth0, Content Square and Apps Flyer.'
+    note: >-
+      A named list of third-party analytics, advertising and identity technologies ("may include"), not a
+      formal subprocessor register. Other recipients are described only by category (e.g. "service providers
+      (e.g. providers of technology, business support, data, analytics and marketing services)").

@@ -1,23 +1,87 @@
 aid: metcash
+
 name: Metcash
-description: 'Metcash is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Metcash Limited is Australia's leading wholesale distribution and marketing company, with a diversified business
+  across food, grocery, hardware and liquor. It supplies and supports independent retailers under banners including IGA, Foodland,
+  Campbells, Superior Food, Mitre 10, Home Hardware, Total Tools, Hardings Hardware, Cellarbrations, IGA Liquor and the Bottle-O,
+  and operates the MetConnect retailer portal. Metcash is listed on the ASX. It was surfaced via the API Evangelist harvest
+  backlog (australia-apidays-2026); no public developer API or documentation was identified on metcash.com.
+
 url: https://raw.githubusercontent.com/api-evangelist/metcash/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
-modified: '2026-10-21'
+
+modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Wholesale
+- Grocery
+- Retail
+- Hardware
+- Liquor
+- Distribution
+- Australia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://www.metcash.com/wp-content/uploads/2024/03/cropped-cropped-metcash-ltd-logo-sans-outline-192x192-1-192x192.png
+
 common:
+- type: WellKnown
+  url: well-known/metcash-well-known.yml
+- type: Hosts
+  url: hosts/metcash-hosts.yml
+- type: IntegrationEdges
+  url: integrations/metcash-integration-edges.yml
+- type: Vendors
+  url: vendors/metcash-vendors.yml
+- type: GitHubOrganization
+  url: https://github.com/Metcash
+- type: DomainSecurity
+  url: security/metcash-domain-security.yml
 - type: Website
-  url: https://metcash.com/
+  url: https://www.metcash.com/
+- type: Support
+  url: https://www.metcash.com/contact/
+- type: Blog
+  url: https://www.metcash.com/about-us/latest-news/
+- type: TermsOfService
+  url: https://www.metcash.com/legal/terms-conditions/
+- type: PrivacyPolicy
+  url: https://www.metcash.com/legal/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/metcash/
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website verified by title "Home | Metcash | Australia’s leading wholesale distribution and marketing company". No
+    developer portal, API docs or public API found; metconnect.metcash.com is a Salesforce retailer portal, not an API.
+  evidence:
+  - url: https://www.metcash.com/
+    status: 200
+  - url: https://metconnect.metcash.com/food/s/
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

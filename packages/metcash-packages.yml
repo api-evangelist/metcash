@@ -1,0 +1,5 @@
+generated: '2026-10-22'
+method: none
+source: https://registry.npmjs.org/metcash
+note: No first-party SDK or package found. registry.npmjs.org/metcash 404, pypi.org/pypi/metcash/json 404; GitHub repository search for "metcash" returns only unaffiliated personal repos. Metcash publishes no developer API.
+packages: []
